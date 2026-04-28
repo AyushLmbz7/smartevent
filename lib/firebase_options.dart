@@ -25,9 +25,15 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        return macos;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for macos - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.windows:
-        return windows;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for windows - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.linux:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for linux - '
@@ -52,7 +58,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyBSj486KAyEs-83dqpnH9tZDjLHQGlFLio',
-    appId: '1:1080576785962:android:25841f5431bbd514f64d53',
+    appId: '1:1080576785962:android:06cc1826cab47969f64d53',
     messagingSenderId: '1080576785962',
     projectId: 'eventsmart-6e0b9',
     storageBucket: 'eventsmart-6e0b9.firebasestorage.app',
@@ -60,29 +66,10 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyDfv7C2s5wQNO8GV0nsWLj2H1kxtpdPr2U',
-    appId: '1:1080576785962:ios:8d2d67d2958798aff64d53',
+    appId: '1:1080576785962:ios:2fa85f260f8b40d5f64d53',
     messagingSenderId: '1080576785962',
     projectId: 'eventsmart-6e0b9',
     storageBucket: 'eventsmart-6e0b9.firebasestorage.app',
-    iosBundleId: 'com.example.eventapp',
-  );
-
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyDfv7C2s5wQNO8GV0nsWLj2H1kxtpdPr2U',
-    appId: '1:1080576785962:ios:8d2d67d2958798aff64d53',
-    messagingSenderId: '1080576785962',
-    projectId: 'eventsmart-6e0b9',
-    storageBucket: 'eventsmart-6e0b9.firebasestorage.app',
-    iosBundleId: 'com.example.eventapp',
-  );
-
-  static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyBoQbsjbaiWFrtPh1Ik6CdAYWANQQhcNoA',
-    appId: '1:1080576785962:web:9bec85f322d42df6f64d53',
-    messagingSenderId: '1080576785962',
-    projectId: 'eventsmart-6e0b9',
-    authDomain: 'eventsmart-6e0b9.firebaseapp.com',
-    storageBucket: 'eventsmart-6e0b9.firebasestorage.app',
-    measurementId: 'G-JWQT6ZB47H',
+    iosBundleId: 'com.example.smartevent',
   );
 }
